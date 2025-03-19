@@ -49,4 +49,4 @@ jobs:
         script: |
           docker stop ai
           docker rm --force ai
-          docker run -d -p 8084:8084 --name ai --network=rede jpqv/ai-ci:${{ github.sha }}
+          docker run -d -p 8080:8080 --name ai jpqv/ai-ci:${{ github.sha }}
