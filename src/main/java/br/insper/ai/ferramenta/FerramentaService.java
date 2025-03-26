@@ -48,7 +48,7 @@ public class FerramentaService {
     public void deletarFerramenta(String id, String emailUsuario) {
         Usuario usuario = usuarioService.getUsuario(emailUsuario);
 
-        if (usuario.getPapel() != "ADMIN") {
+        if (!usuario.getPapel().equals("ADMIN")) {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN);
         }
 

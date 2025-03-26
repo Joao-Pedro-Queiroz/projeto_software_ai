@@ -42,9 +42,4 @@ public class Usuario {
     public void setPapel(String papel) {
         this.papel = papel;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        return this.email.equals(((Usuario) obj).getEmail());
-    }
 }
